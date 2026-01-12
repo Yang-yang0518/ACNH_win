@@ -1,0 +1,353 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Username\\source\\repos\\ACNH_win\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{97C55A69-9926-4CEB-AB09-064724740538}|ACNH_win\\ACNH_win.csproj|c:\\users\\username\\source\\repos\\acnh_win\\acnh_win\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{97C55A69-9926-4CEB-AB09-064724740538}|ACNH_win\\ACNH_win.csproj|solutionrelative:acnh_win\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97C55A69-9926-4CEB-AB09-064724740538}|ACNH_win\\ACNH_win.csproj|c:\\users\\username\\source\\repos\\acnh_win\\acnh_win\\acnh_win.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{97C55A69-9926-4CEB-AB09-064724740538}|ACNH_win\\ACNH_win.csproj|solutionrelative:acnh_win\\acnh_win.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97C55A69-9926-4CEB-AB09-064724740538}|ACNH_win\\ACNH_win.csproj|c:\\users\\username\\source\\repos\\acnh_win\\acnh_win\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{97C55A69-9926-4CEB-AB09-064724740538}|ACNH_win\\ACNH_win.csproj|solutionrelative:acnh_win\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97C55A69-9926-4CEB-AB09-064724740538}|ACNH_win\\ACNH_win.csproj|C:\\Users\\Username\\source\\repos\\ACNH_win\\acnh_win\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{97C55A69-9926-4CEB-AB09-064724740538}|ACNH_win\\ACNH_win.csproj|solutionrelative:acnh_win\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97C55A69-9926-4CEB-AB09-064724740538}|ACNH_win\\ACNH_win.csproj|c:\\users\\username\\source\\repos\\acnh_win\\acnh_win\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{97C55A69-9926-4CEB-AB09-064724740538}|ACNH_win\\ACNH_win.csproj|solutionrelative:acnh_win\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97C55A69-9926-4CEB-AB09-064724740538}|ACNH_win\\ACNH_win.csproj|c:\\users\\username\\source\\repos\\acnh_win\\acnh_win\\frmgivegift.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{97C55A69-9926-4CEB-AB09-064724740538}|ACNH_win\\ACNH_win.csproj|solutionrelative:acnh_win\\frmgivegift.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97C55A69-9926-4CEB-AB09-064724740538}|ACNH_win\\ACNH_win.csproj|c:\\users\\username\\source\\repos\\acnh_win\\acnh_win\\security\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{97C55A69-9926-4CEB-AB09-064724740538}|ACNH_win\\ACNH_win.csproj|solutionrelative:acnh_win\\security\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97C55A69-9926-4CEB-AB09-064724740538}|ACNH_win\\ACNH_win.csproj|c:\\users\\username\\source\\repos\\acnh_win\\acnh_win\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{97C55A69-9926-4CEB-AB09-064724740538}|ACNH_win\\ACNH_win.csproj|solutionrelative:acnh_win\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97C55A69-9926-4CEB-AB09-064724740538}|ACNH_win\\ACNH_win.csproj|c:\\users\\username\\source\\repos\\acnh_win\\acnh_win\\security\\passwordhasher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{97C55A69-9926-4CEB-AB09-064724740538}|ACNH_win\\ACNH_win.csproj|solutionrelative:acnh_win\\security\\passwordhasher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97C55A69-9926-4CEB-AB09-064724740538}|ACNH_win\\ACNH_win.csproj|c:\\users\\username\\source\\repos\\acnh_win\\acnh_win\\frmresidentadd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{97C55A69-9926-4CEB-AB09-064724740538}|ACNH_win\\ACNH_win.csproj|solutionrelative:acnh_win\\frmresidentadd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97C55A69-9926-4CEB-AB09-064724740538}|ACNH_win\\ACNH_win.csproj|C:\\Users\\Username\\source\\repos\\ACNH_win\\acnh_win\\frmresidentadd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{97C55A69-9926-4CEB-AB09-064724740538}|ACNH_win\\ACNH_win.csproj|solutionrelative:acnh_win\\frmresidentadd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97C55A69-9926-4CEB-AB09-064724740538}|ACNH_win\\ACNH_win.csproj|C:\\Users\\Username\\source\\repos\\ACNH_win\\acnh_win\\frmgivegift.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{97C55A69-9926-4CEB-AB09-064724740538}|ACNH_win\\ACNH_win.csproj|solutionrelative:acnh_win\\frmgivegift.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97C55A69-9926-4CEB-AB09-064724740538}|ACNH_win\\ACNH_win.csproj|C:\\Users\\Username\\source\\repos\\ACNH_win\\acnh_win\\frmresidentsearch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{97C55A69-9926-4CEB-AB09-064724740538}|ACNH_win\\ACNH_win.csproj|solutionrelative:acnh_win\\frmresidentsearch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97C55A69-9926-4CEB-AB09-064724740538}|ACNH_win\\ACNH_win.csproj|c:\\users\\username\\source\\repos\\acnh_win\\acnh_win\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{97C55A69-9926-4CEB-AB09-064724740538}|ACNH_win\\ACNH_win.csproj|solutionrelative:acnh_win\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97C55A69-9926-4CEB-AB09-064724740538}|ACNH_win\\ACNH_win.csproj|c:\\users\\username\\source\\repos\\acnh_win\\acnh_win\\optiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{97C55A69-9926-4CEB-AB09-064724740538}|ACNH_win\\ACNH_win.csproj|solutionrelative:acnh_win\\optiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97C55A69-9926-4CEB-AB09-064724740538}|ACNH_win\\ACNH_win.csproj|C:\\Users\\Username\\source\\repos\\ACNH_win\\acnh_win\\frmresidentdelete.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{97C55A69-9926-4CEB-AB09-064724740538}|ACNH_win\\ACNH_win.csproj|solutionrelative:acnh_win\\frmresidentdelete.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97C55A69-9926-4CEB-AB09-064724740538}|ACNH_win\\ACNH_win.csproj|c:\\users\\username\\source\\repos\\acnh_win\\acnh_win\\frmresidentdelete.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{97C55A69-9926-4CEB-AB09-064724740538}|ACNH_win\\ACNH_win.csproj|solutionrelative:acnh_win\\frmresidentdelete.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97C55A69-9926-4CEB-AB09-064724740538}|ACNH_win\\ACNH_win.csproj|c:\\users\\username\\source\\repos\\acnh_win\\acnh_win\\frmresidentsearch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{97C55A69-9926-4CEB-AB09-064724740538}|ACNH_win\\ACNH_win.csproj|solutionrelative:acnh_win\\frmresidentsearch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97C55A69-9926-4CEB-AB09-064724740538}|ACNH_win\\ACNH_win.csproj|c:\\users\\username\\source\\repos\\acnh_win\\acnh_win\\frmresidentsearch.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{97C55A69-9926-4CEB-AB09-064724740538}|ACNH_win\\ACNH_win.csproj|solutionrelative:acnh_win\\frmresidentsearch.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97C55A69-9926-4CEB-AB09-064724740538}|ACNH_win\\ACNH_win.csproj|c:\\users\\username\\source\\repos\\acnh_win\\acnh_win\\iddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{97C55A69-9926-4CEB-AB09-064724740538}|ACNH_win\\ACNH_win.csproj|solutionrelative:acnh_win\\iddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97C55A69-9926-4CEB-AB09-064724740538}|ACNH_win\\ACNH_win.csproj|c:\\users\\username\\source\\repos\\acnh_win\\acnh_win\\dataaccess\\sqlparameterbuilder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{97C55A69-9926-4CEB-AB09-064724740538}|ACNH_win\\ACNH_win.csproj|solutionrelative:acnh_win\\dataaccess\\sqlparameterbuilder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "frmGiveGift.cs",
+              "DocumentMoniker": "C:\\Users\\Username\\source\\repos\\ACNH_win\\ACNH_win\\frmGiveGift.cs",
+              "RelativeDocumentMoniker": "ACNH_win\\frmGiveGift.cs",
+              "ToolTip": "C:\\Users\\Username\\source\\repos\\ACNH_win\\ACNH_win\\frmGiveGift.cs",
+              "RelativeToolTip": "ACNH_win\\frmGiveGift.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAswGwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-11T02:35:02.891Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "frmLogin.cs [\u8A2D\u8A08]",
+              "DocumentMoniker": "C:\\Users\\Username\\source\\repos\\ACNH_win\\ACNH_win\\frmLogin.cs",
+              "RelativeDocumentMoniker": "ACNH_win\\frmLogin.cs",
+              "ToolTip": "C:\\Users\\Username\\source\\repos\\ACNH_win\\ACNH_win\\frmLogin.cs [\u8A2D\u8A08]",
+              "RelativeToolTip": "ACNH_win\\frmLogin.cs [\u8A2D\u8A08]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-12T14:25:47.621Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "frmLogin.cs",
+              "DocumentMoniker": "C:\\Users\\Username\\source\\repos\\ACNH_win\\ACNH_win\\frmLogin.cs",
+              "RelativeDocumentMoniker": "ACNH_win\\frmLogin.cs",
+              "ToolTip": "C:\\Users\\Username\\source\\repos\\ACNH_win\\ACNH_win\\frmLogin.cs",
+              "RelativeToolTip": "ACNH_win\\frmLogin.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAC4AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-12T14:23:52.977Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ACNH_win.csproj",
+              "DocumentMoniker": "C:\\Users\\Username\\source\\repos\\ACNH_win\\ACNH_win\\ACNH_win.csproj",
+              "RelativeDocumentMoniker": "ACNH_win\\ACNH_win.csproj",
+              "ToolTip": "C:\\Users\\Username\\source\\repos\\ACNH_win\\ACNH_win\\ACNH_win.csproj",
+              "RelativeToolTip": "ACNH_win\\ACNH_win.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-01-12T14:02:44.467Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Username\\source\\repos\\ACNH_win\\ACNH_win\\Program.cs",
+              "RelativeDocumentMoniker": "ACNH_win\\Program.cs",
+              "ToolTip": "C:\\Users\\Username\\source\\repos\\ACNH_win\\ACNH_win\\Program.cs",
+              "RelativeToolTip": "ACNH_win\\Program.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwCAAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-12T13:59:21.168Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "frmResidentSearch.cs [\u8A2D\u8A08]",
+              "DocumentMoniker": "C:\\Users\\Username\\source\\repos\\ACNH_win\\ACNH_win\\frmResidentSearch.cs",
+              "RelativeDocumentMoniker": "ACNH_win\\frmResidentSearch.cs",
+              "ToolTip": "C:\\Users\\Username\\source\\repos\\ACNH_win\\ACNH_win\\frmResidentSearch.cs [\u8A2D\u8A08]",
+              "RelativeToolTip": "ACNH_win\\frmResidentSearch.cs [\u8A2D\u8A08]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-10T07:35:44.58Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs [\u8A2D\u8A08]",
+              "DocumentMoniker": "C:\\Users\\Username\\source\\repos\\ACNH_win\\ACNH_win\\Form1.cs",
+              "RelativeDocumentMoniker": "ACNH_win\\Form1.cs",
+              "ToolTip": "C:\\Users\\Username\\source\\repos\\ACNH_win\\ACNH_win\\Form1.cs [\u8A2D\u8A08]",
+              "RelativeToolTip": "ACNH_win\\Form1.cs [\u8A2D\u8A08]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-08T12:26:34.173Z",
+              "EditorCaption": " [\u8A2D\u8A08]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Username\\source\\repos\\ACNH_win\\ACNH_win\\Security\\UserRepository.cs",
+              "RelativeDocumentMoniker": "ACNH_win\\Security\\UserRepository.cs",
+              "ToolTip": "C:\\Users\\Username\\source\\repos\\ACNH_win\\ACNH_win\\Security\\UserRepository.cs",
+              "RelativeToolTip": "ACNH_win\\Security\\UserRepository.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAA1wCkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-12T14:03:25.805Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "frmResidentAdd.cs [\u8A2D\u8A08]",
+              "DocumentMoniker": "C:\\Users\\Username\\source\\repos\\ACNH_win\\ACNH_win\\frmResidentAdd.cs",
+              "RelativeDocumentMoniker": "ACNH_win\\frmResidentAdd.cs",
+              "ToolTip": "C:\\Users\\Username\\source\\repos\\ACNH_win\\ACNH_win\\frmResidentAdd.cs [\u8A2D\u8A08]",
+              "RelativeToolTip": "ACNH_win\\frmResidentAdd.cs [\u8A2D\u8A08]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-10T05:14:05.221Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "OptionDto.cs",
+              "DocumentMoniker": "C:\\Users\\Username\\source\\repos\\ACNH_win\\ACNH_win\\OptionDto.cs",
+              "RelativeDocumentMoniker": "ACNH_win\\OptionDto.cs",
+              "ToolTip": "C:\\Users\\Username\\source\\repos\\ACNH_win\\ACNH_win\\OptionDto.cs",
+              "RelativeToolTip": "ACNH_win\\OptionDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-10T07:20:39.782Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "App.config",
+              "DocumentMoniker": "C:\\Users\\Username\\source\\repos\\ACNH_win\\ACNH_win\\App.config",
+              "RelativeDocumentMoniker": "ACNH_win\\App.config",
+              "ToolTip": "C:\\Users\\Username\\source\\repos\\ACNH_win\\ACNH_win\\App.config",
+              "RelativeToolTip": "ACNH_win\\App.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2026-01-09T12:01:48.518Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "PasswordHasher.cs",
+              "DocumentMoniker": "C:\\Users\\Username\\source\\repos\\ACNH_win\\ACNH_win\\Security\\PasswordHasher.cs",
+              "RelativeDocumentMoniker": "ACNH_win\\Security\\PasswordHasher.cs",
+              "ToolTip": "C:\\Users\\Username\\source\\repos\\ACNH_win\\ACNH_win\\Security\\PasswordHasher.cs",
+              "RelativeToolTip": "ACNH_win\\Security\\PasswordHasher.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-12T14:07:34.765Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "frmResidentDelete.cs [\u8A2D\u8A08]",
+              "DocumentMoniker": "C:\\Users\\Username\\source\\repos\\ACNH_win\\ACNH_win\\frmResidentDelete.cs",
+              "RelativeDocumentMoniker": "ACNH_win\\frmResidentDelete.cs",
+              "ToolTip": "C:\\Users\\Username\\source\\repos\\ACNH_win\\ACNH_win\\frmResidentDelete.cs [\u8A2D\u8A08]",
+              "RelativeToolTip": "ACNH_win\\frmResidentDelete.cs [\u8A2D\u8A08]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-10T07:35:20.116Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "frmGiveGift.cs [\u8A2D\u8A08]",
+              "DocumentMoniker": "C:\\Users\\Username\\source\\repos\\ACNH_win\\ACNH_win\\frmGiveGift.cs",
+              "RelativeDocumentMoniker": "ACNH_win\\frmGiveGift.cs",
+              "ToolTip": "C:\\Users\\Username\\source\\repos\\ACNH_win\\ACNH_win\\frmGiveGift.cs [\u8A2D\u8A08]",
+              "RelativeToolTip": "ACNH_win\\frmGiveGift.cs [\u8A2D\u8A08]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-11T02:04:44.687Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "frmResidentAdd.cs",
+              "DocumentMoniker": "C:\\Users\\Username\\source\\repos\\ACNH_win\\ACNH_win\\frmResidentAdd.cs",
+              "RelativeDocumentMoniker": "ACNH_win\\frmResidentAdd.cs",
+              "ToolTip": "C:\\Users\\Username\\source\\repos\\ACNH_win\\ACNH_win\\frmResidentAdd.cs",
+              "RelativeToolTip": "ACNH_win\\frmResidentAdd.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAIA1wF8AAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-10T05:16:25.781Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\Username\\source\\repos\\ACNH_win\\ACNH_win\\Form1.cs",
+              "RelativeDocumentMoniker": "ACNH_win\\Form1.cs",
+              "ToolTip": "C:\\Users\\Username\\source\\repos\\ACNH_win\\ACNH_win\\Form1.cs",
+              "RelativeToolTip": "ACNH_win\\Form1.cs",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAqwDIAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-10T02:52:03.101Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "frmResidentSearch.cs",
+              "DocumentMoniker": "C:\\Users\\Username\\source\\repos\\ACNH_win\\ACNH_win\\frmResidentSearch.cs",
+              "RelativeDocumentMoniker": "ACNH_win\\frmResidentSearch.cs",
+              "ToolTip": "C:\\Users\\Username\\source\\repos\\ACNH_win\\ACNH_win\\frmResidentSearch.cs",
+              "RelativeToolTip": "ACNH_win\\frmResidentSearch.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAewKEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-10T07:45:17Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "frmResidentDelete.cs",
+              "DocumentMoniker": "C:\\Users\\Username\\source\\repos\\ACNH_win\\ACNH_win\\frmResidentDelete.cs",
+              "RelativeDocumentMoniker": "ACNH_win\\frmResidentDelete.cs",
+              "ToolTip": "C:\\Users\\Username\\source\\repos\\ACNH_win\\ACNH_win\\frmResidentDelete.cs",
+              "RelativeToolTip": "ACNH_win\\frmResidentDelete.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAhwCwAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-10T09:16:45.152Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "frmResidentSearch.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Username\\source\\repos\\ACNH_win\\ACNH_win\\frmResidentSearch.Designer.cs",
+              "RelativeDocumentMoniker": "ACNH_win\\frmResidentSearch.Designer.cs",
+              "ToolTip": "C:\\Users\\Username\\source\\repos\\ACNH_win\\ACNH_win\\frmResidentSearch.Designer.cs",
+              "RelativeToolTip": "ACNH_win\\frmResidentSearch.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-10T09:11:54.754Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "IdDto.cs",
+              "DocumentMoniker": "C:\\Users\\Username\\source\\repos\\ACNH_win\\ACNH_win\\IdDto.cs",
+              "RelativeDocumentMoniker": "ACNH_win\\IdDto.cs",
+              "ToolTip": "C:\\Users\\Username\\source\\repos\\ACNH_win\\ACNH_win\\IdDto.cs",
+              "RelativeToolTip": "ACNH_win\\IdDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-10T07:21:52.569Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "SqlParameterBuilder.cs",
+              "DocumentMoniker": "C:\\Users\\Username\\source\\repos\\ACNH_win\\ACNH_win\\DataAccess\\SqlParameterBuilder.cs",
+              "RelativeDocumentMoniker": "ACNH_win\\DataAccess\\SqlParameterBuilder.cs",
+              "ToolTip": "C:\\Users\\Username\\source\\repos\\ACNH_win\\ACNH_win\\DataAccess\\SqlParameterBuilder.cs",
+              "RelativeToolTip": "ACNH_win\\DataAccess\\SqlParameterBuilder.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-10T02:28:30.359Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
