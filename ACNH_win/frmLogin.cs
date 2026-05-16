@@ -13,10 +13,13 @@ namespace ACNH_win
 {
     public partial class frmLogin : Form
     {
-        public frmLogin()
-        {
-            InitializeComponent();
-        }
+		//增加建構子
+		private readonly string _connStr;
+		public frmLogin(string connStr)
+		{
+			InitializeComponent();
+			_connStr = connStr;
+		}
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
@@ -29,14 +32,14 @@ namespace ACNH_win
                 return;
             }
 
-            string connStr = Program.GetConnectionString();
+            
 
-            if (UserRepository.TryLogin(connStr, username, password, out int userId))
+            if (UserRepository.TryLogin(_connStr, username, password, out int userId))
             {
                 Session.CurrentUserId = userId;
                 Session.CurrentUsername = username;
 
-                var main = new Form1();
+                var main = new frmResidentInfo(_connStr);
                 main.Show();
 
                 this.Hide();   // 或 this.Close();
@@ -46,5 +49,6 @@ namespace ACNH_win
                 MessageBox.Show("帳號或密碼錯誤");
             }
         }
-    }
+       
+	}
 }

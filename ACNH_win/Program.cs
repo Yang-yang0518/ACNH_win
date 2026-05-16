@@ -9,29 +9,22 @@ namespace ACNH_win
     {
         public static string GetConnectionString()
         {
-            //return ConfigurationManager
-            //    .ConnectionStrings["default"]
-            //    .ConnectionString;
-#if DEBUG
-            return ConfigurationManager
-                .ConnectionStrings["ACNH_DB_HOME"]
-                .ConnectionString;
-#else
-    return ConfigurationManager
-        .ConnectionStrings["ACNH_DB_SCHOOL"]
-        .ConnectionString;
-#endif
-        }
+			//return ConfigurationManager
+			//    .ConnectionStrings["default"]
+			//    .ConnectionString;
+			return ConfigurationManager
+		    .ConnectionStrings["ACNH_DB"]
+		    .ConnectionString;
+
+		}
 
         [STAThread]
         static void Main()
         {
-            ApplicationConfiguration.Initialize();
-            string connStr = GetConnectionString();
-            Application.Run(new frmLogin());
+			ApplicationConfiguration.Initialize();
+			string connStr = GetConnectionString();
 
-            //UserRepository.CreateUser(connStr, "admin", "1234");
-
-        }
+			Application.Run(new frmLogin(connStr));
+		}
     }
 }

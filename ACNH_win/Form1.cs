@@ -7,7 +7,7 @@ using System.Windows.Forms;
 namespace ACNH_win
 
 {
-    public partial class Form1 : Form
+    public partial class frmResidentInfo : Form
     {
         private readonly string _connStr =
            @"Data Source=.\sql2025;
@@ -15,10 +15,11 @@ namespace ACNH_win
               User ID=sa;
               Password=Sa5!sa5!;
               TrustServerCertificate=True";
-        public Form1()
+        public frmResidentInfo(string connStr)
         {
             InitializeComponent();
             this.Load += Form1_Load;
+            _connStr = connStr;
         }
         private void Form1_Load(object sender, EventArgs e)
         {
