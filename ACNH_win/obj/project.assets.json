@@ -1604,11 +1604,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Username\\Desktop\\動森專題\\ACNH_win超級終極版\\ACNH_win\\ACNH_win\\ACNH_win.csproj",
+      "projectUniqueName": "C:\\Users\\Username\\Desktop\\ACNH_win\\ACNH_win\\ACNH_win.csproj",
       "projectName": "ACNH_win",
-      "projectPath": "C:\\Users\\Username\\Desktop\\動森專題\\ACNH_win超級終極版\\ACNH_win\\ACNH_win\\ACNH_win.csproj",
+      "projectPath": "C:\\Users\\Username\\Desktop\\ACNH_win\\ACNH_win\\ACNH_win.csproj",
       "packagesPath": "C:\\Users\\Username\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Username\\Desktop\\動森專題\\ACNH_win超級終極版\\ACNH_win\\ACNH_win\\obj\\",
+      "outputPath": "C:\\Users\\Username\\Desktop\\ACNH_win\\ACNH_win\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
