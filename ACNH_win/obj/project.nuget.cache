@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "YC/+sZ1ppEA=",
+  "dgSpecHash": "VL83mUVz2D0=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Username\\source\\repos\\ACNH_win\\ACNH_win\\ACNH_win.csproj",
+  "projectFilePath": "C:\\Users\\Username\\Desktop\\動森專題\\ACNH_win超級終極版\\ACNH_win\\ACNH_win\\ACNH_win.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Username\\.nuget\\packages\\azure.core\\1.47.1\\azure.core.1.47.1.nupkg.sha512",
     "C:\\Users\\Username\\.nuget\\packages\\azure.identity\\1.14.2\\azure.identity.1.14.2.nupkg.sha512",

@@ -32,6 +32,10 @@ namespace ACNH_win
 
             cboGifts.SelectedIndexChanged += (_, __) => RefreshPreview();
             RefreshPreview();
+
+            RefreshAffectionUI();
+
+            this.BackColor = Color.FromArgb(250, 247, 242);
         }
 
         //載入禮物清單
@@ -107,12 +111,42 @@ SELECT COALESCE((
             lblFeedback.Text = "(尚未送禮)";
         }
 
+        private void RefreshAffectionUI() 
+        {
+            int affection = 0;
+
+            using (var conn = new SqlConnection(_connStr))
+            using (var cmd = new SqlCommand(
+                 @"SELECT Affection
+          FROM ResidentFriendship
+          WHERE ResidentId = @ResidentId;", conn))
+            {
+                cmd.Parameters.AddWithValue("@ResidentId", _residentId);
+
+                conn.Open();
+                object? result = cmd.ExecuteScalar();
+
+                if (result != null && result != DBNull.Value) 
+                {
+                    affection = Convert.ToInt32(result);
+                }
+            }
+
+            affection = Math.Max(pbAffection.Minimum,
+                        Math.Min(pbAffection.Maximum, affection));
+
+			pbAffection.Value = affection;
+            lblAffectionText.Text = $"{affection} / {pbAffection.Maximum}";
+			lblAffectionLevel.Text = $"等級：{GetAffectionLevelText(affection, pbAffection.Maximum)}";
+
+
+		}
 
 
 
 
 
-        private void btnSendGift_Click(object sender, EventArgs e)
+		private void btnSendGift_Click(object sender, EventArgs e)
         {
             if (cboGifts.SelectedItem == null)
             {
@@ -173,14 +207,31 @@ WHERE ResidentId = @ResidentId;
             lblAffectionValue.Text = result.Affection.ToString();
             lblFeedback.Text = BuildFeedbackText(result.DeltaApplied);
 
-            // 告訴上一個視窗：成功了，請刷新
-            //this.DialogResult = DialogResult.OK;
-            //this.Close();
-        }
+            string line = PickGiftResponseLine(result.DeltaApplied);
+            MessageBox.Show(line, $"{_residentName} 的回饋", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+			RefreshAffectionUI();
+
+			// 告訴上一個視窗：成功了，請刷新
+			//this.DialogResult = DialogResult.OK;
+			//this.Close();
+		}
+		private string GetAffectionLevelText(int affection, int max)
+		{
+			double ratio = max <= 0 ? 0 : (double)affection / max;
+
+			if (ratio < 0.10) return "初識";
+			if (ratio < 0.25) return "熟人";
+			if (ratio < 0.50) return "朋友";
+			if (ratio < 0.80) return "麻吉";
+			return "摯友";
+		}
 
 
-        //添加屬性for視窗用
-        private class GiveGiftResultDto
+
+
+		//添加屬性for視窗用
+		private class GiveGiftResultDto
         {
             public int DeltaApplied { get; set; }
             public int Affection { get; set; }
@@ -194,10 +245,45 @@ WHERE ResidentId = @ResidentId;
 
         private string BuildFeedbackText(int delta)
         {
-            if (delta > 0) return $"喜歡!!!! (好感度 +{delta})";
-            if (delta < 0) return $"討厭!!!! (好感度 -{delta})";
+            if (delta == 2) return $"喜歡!!!! (好感度 +{delta})";
+            if (delta == -1) return $"討厭!!!! (好感度 {delta})";
             return "普通ㄟ~(好感度 +0)";
 
+        }
+
+        private static readonly Random _rng = new Random();
+
+        private string PickGiftResponseLine(int delta)
+        {
+            string[] likeLines =
+            {
+                "哇！這個我超喜歡！謝謝你～",
+                "你怎麼知道我想要這個！太神啦！",
+                "欸欸欸！這也太讚了吧！"
+            };
+
+            string[] normalLines =
+            {
+               "喔～謝謝你！",
+               "嗯嗯，收到啦～謝謝你。",
+               "謝啦！我會好好用的～"
+            };
+
+            string[] dislikeLines =
+            {
+               "呃…謝、謝謝…（尷尬）",
+               "啊…這個啊…我收下了…",
+               "咳…謝謝你…（眼神飄走）"
+            };
+
+            var pool = delta switch
+            {
+                2 => likeLines, //喜歡
+                -1 => dislikeLines, //討厭
+                _ => normalLines //普通
+            };
+
+            return pool[_rng.Next(pool.Length)];
         }
 
         private void btnClose_Click(object sender, EventArgs e)

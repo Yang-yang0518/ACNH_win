@@ -12,52 +12,46 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace ACNH_win
 {
-    public partial class frmResidentSearch : Form
-    {
-        private readonly string _connStr;
+	public partial class frmResidentSearch : Form
+	{
+		private readonly string _connStr;
 
-        public int? SelectedResidentId { get; private set; }
-        public frmResidentSearch(string connStr)
-        {
-            InitializeComponent();
-            _connStr = connStr;
+		public int? SelectedResidentId { get; private set; }
+		public frmResidentSearch(string connStr)
+		{
+			InitializeComponent();
+			_connStr = connStr;
+
+            this.KeyPreview = true;
+            this.KeyDown += frmResidentSearch_KeyDown;
 
             this.Load += frmResidentSearch_Load;
-            btnSearch.Click += BtnSearch_Click;
-            dgvResidents.CellDoubleClick += DgvResidents_CellDoubleClick;
+			btnSearch.Click += BtnSearch_Click;
+			dgvResidents.CellDoubleClick += DgvResidents_CellDoubleClick;
+
+            this.BackColor = Color.FromArgb(250, 247, 242);
         }
 
-        private void frmResidentSearch_Load(object sender, EventArgs e)
-        {
-            BindSpecies();
-            BindPersonality();
+		private void frmResidentSearch_Load(object sender, EventArgs e)
+		{
+			dgvResidents.AutoGenerateColumns = true;
+			dgvResidents.ReadOnly = true;
+			dgvResidents.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+			dgvResidents.MultiSelect = false;
 
-            cboSpecies.DropDownStyle = ComboBoxStyle.DropDownList;
-            cboPersonality.DropDownStyle = ComboBoxStyle.DropDownList;
+			SearchAndBind();
+		}
 
-            dgvResidents.AutoGenerateColumns = true;
-            dgvResidents.ReadOnly = true;
-            dgvResidents.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvResidents.MultiSelect = false;
+		private void BtnSearch_Click(object? sender, EventArgs e)
+		{
+			SearchAndBind();
+		}
 
-            SearchAndBind();
-        }
+		private void SearchAndBind()
+		{
+			var helper = new DbHelper(_connStr);
 
-        private void BtnSearch_Click(object? sender, EventArgs e)
-        {
-            SearchAndBind();
-        }
-
-        private void SearchAndBind()
-        {
-            var helper = new DbHelper(_connStr);
-
-            string keyword = txtKeyword.Text.Trim();
-            int? speciesId = (cboSpecies.SelectedValue as int?);
-            int? personalityId = (cboPersonality.SelectedValue as int?);
-
-            if (speciesId == 0) speciesId = null;
-            if (personalityId == 0) personalityId = null;
+			string keyword = txtKeyword.Text.Trim();
 
             string sql = @"
 SELECT
@@ -72,47 +66,53 @@ JOIN Personality p ON p.Id = r.PersonalityId
 LEFT JOIN ResidentFriendship rf ON rf.ResidentId = r.Id
 WHERE r.IsDeleted = 0
 ";
-
+			
             var builder = new SqlParameterBuilder();
 
-            //名字條件
-            if (!string.IsNullOrWhiteSpace(keyword))
-            {
-                sql += " AND r.Name LIKE @Keyword";
-                builder.AddNVarChar("@Keyword", 50, "%" + keyword + "%");
-            }
+			//名字條件
+			if (!string.IsNullOrWhiteSpace(keyword))
+			{
+				sql += " AND r.Name LIKE @Keyword";
+				builder.AddNVarChar("@Keyword", 50, "%" + keyword + "%");
+			}
 
-            //種族條件
-            if (speciesId.HasValue)
-            {
-                sql += " AND r.SpeciesId = @SpeciesId";
-                builder.AddInt("@SpeciesId", speciesId.Value);
-            }
+			sql += " ORDER BY r.Name;";
 
-            //性格條件
-            if (personalityId.HasValue)
-            {
-                sql += " AND r.PersonalityId = @PersonalityId";
-                builder.AddInt("@PersonalityId", personalityId.Value);
-            }
+			var parameters = builder.ToArry();
 
-            sql += " ORDER BY r.Name;";
+			var rows = helper.Query(r => new ResidentRowDto
+			{
+				Id = r.GetInt32(0),
+				Name = r.GetString(1),
+				Species = r.GetString(2),
+				Personality = r.GetString(3),
+				Affection = r.GetInt32(4)
+			}, sql, parameters).ToList();
 
-            var parameters = builder.ToArry();
+			dgvResidents.DataSource = rows;
 
-            var rows = helper.Query(r => new ResidentRowDto
-            {
-                Id = r.GetInt32(0),
-                Name = r.GetString(1),
-                Species = r.GetString(2),
-                Personality = r.GetString(3),
-                Affection = r.GetInt32(4)
-            }, sql, parameters).ToList();
+			if (rows.Count == 0) 
+			{
+				MessageBox.Show("查無符合的居民","提示",
+						MessageBoxButtons.OK, MessageBoxIcon.Information);
+			}
 
-            dgvResidents.DataSource = rows;
-        }
+			if (dgvResidents.Columns["Id"] != null) dgvResidents.Columns["Id"].HeaderText = "編號";
+			if (dgvResidents.Columns["Name"] != null) dgvResidents.Columns["Name"].HeaderText = "居民";
+			if (dgvResidents.Columns["Species"] != null) dgvResidents.Columns["Species"].HeaderText = "種族";
+			if (dgvResidents.Columns["Personality"] != null) dgvResidents.Columns["Personality"].HeaderText = "性格";
+			if (dgvResidents.Columns["Affection"] != null) dgvResidents.Columns["Affection"].HeaderText = "好感度";
 
-        private void BindSpecies()  //下拉資料(含全部)
+			if (dgvResidents.Columns["Id"] != null) dgvResidents.Columns["Id"].Visible = false;
+
+			if (dgvResidents.Columns["Affection"] != null)
+				dgvResidents.Columns["Affection"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+
+
+
+		}
+
+		private void BindSpecies()  //下拉資料(含全部)
         {
             var helper = new DbHelper(_connStr);
             var sql = "SELECT Id, Name FROM Species ORDER BY Name;";
@@ -125,9 +125,7 @@ WHERE r.IsDeleted = 0
 
             data.Insert(0, new OptionDto { Id = 0, Name = "全部" });
 
-            cboSpecies.DataSource = data;
-            cboSpecies.DisplayMember = "Name";
-            cboSpecies.ValueMember = "Id";
+           
         }
 
         private void BindPersonality()
@@ -143,21 +141,27 @@ WHERE r.IsDeleted = 0
 
             data.Insert(0, new OptionDto { Id = 0, Name = "全部" });
 
-            cboPersonality.DataSource = data;
-            cboPersonality.DisplayMember = "Name";
-            cboPersonality.ValueMember = "Id";
 
         }
 
-        private void DgvResidents_CellDoubleClick(object? sender, DataGridViewCellEventArgs e)
+		private void DgvResidents_CellDoubleClick(object? sender, DataGridViewCellEventArgs e)
+		{
+			if (e.RowIndex < 0) return;
+
+			var row = dgvResidents.Rows[e.RowIndex].DataBoundItem as ResidentRowDto;
+			if (row == null) return;
+
+			SelectedResidentId = row.Id;
+			this.DialogResult = DialogResult.OK;
+		}
+
+        private void frmResidentSearch_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.RowIndex < 0) return;
-
-            var row = dgvResidents.Rows[e.RowIndex].DataBoundItem as ResidentRowDto;
-            if (row == null) return;
-
-            SelectedResidentId = row.Id;
-            this.DialogResult = DialogResult.OK;
+            if (e.KeyCode == Keys.Escape)
+            {
+                this.Close();
+            }
         }
+
     }
 }

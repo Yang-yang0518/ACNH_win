@@ -23,7 +23,12 @@ namespace ACNH_win
             _residentId = residentId;
             _connStr = connStr;
 
-            label1.Text = $"確定要刪除居民{residentName}嗎?";
+            label1.Text = $"確定要刪除居民{residentName}移到垃圾桶嗎?";
+
+            this.BackColor = Color.FromArgb(250, 247, 242);
+
+            this.KeyPreview = true;
+            this.KeyDown += frmResidentDelete_KeyDown;
 
         }
         private void btnDelete_Click(object sender, EventArgs e)
@@ -36,13 +41,20 @@ namespace ACNH_win
 
             if (rows > 0)
             {
-                MessageBox.Show("居民已刪除");
+                MessageBox.Show("已移到垃圾桶(可回復)");
                 this.DialogResult = DialogResult.OK;
                 this.Close();
             }
             else 
             {
                 MessageBox.Show("刪除失敗");
+            }
+        }
+        private void frmResidentDelete_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                this.Close();   // ESC = 取消刪除、關閉視窗
             }
         }
     }

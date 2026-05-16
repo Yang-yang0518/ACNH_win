@@ -28,9 +28,9 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmResidentInfo));
 			btnGiveGift = new Button();
 			picResident = new PictureBox();
-			pnlResidentDetail = new SplitContainer();
 			lstResidents = new ListBox();
 			lblNameValue = new Label();
 			lblSpeciesValue = new Label();
@@ -42,20 +42,20 @@
 			label3 = new Label();
 			label4 = new Label();
 			lblNameTitle = new Label();
-			btnAddResident = new Button();
-			btnOpenSearch = new Button();
 			btnDeleteResident = new Button();
+			btnResetAffection = new Button();
+			chkTrashMode = new CheckBox();
+			btnRestore = new Button();
+			BtnSearch = new Button();
 			((System.ComponentModel.ISupportInitialize)picResident).BeginInit();
-			((System.ComponentModel.ISupportInitialize)pnlResidentDetail).BeginInit();
-			pnlResidentDetail.SuspendLayout();
 			SuspendLayout();
 			// 
 			// btnGiveGift
 			// 
-			btnGiveGift.Location = new Point(360, 239);
-			btnGiveGift.Margin = new Padding(2, 2, 2, 2);
+			btnGiveGift.Location = new Point(268, 230);
+			btnGiveGift.Margin = new Padding(2);
 			btnGiveGift.Name = "btnGiveGift";
-			btnGiveGift.Size = new Size(73, 23);
+			btnGiveGift.Size = new Size(89, 32);
 			btnGiveGift.TabIndex = 4;
 			btnGiveGift.Text = "送禮";
 			btnGiveGift.UseVisualStyleBackColor = true;
@@ -63,26 +63,13 @@
 			// 
 			// picResident
 			// 
-			picResident.BorderStyle = BorderStyle.FixedSingle;
-			picResident.Location = new Point(292, 12);
-			picResident.Margin = new Padding(2, 2, 2, 2);
+			picResident.Location = new Point(17, 42);
+			picResident.Margin = new Padding(2);
 			picResident.Name = "picResident";
-			picResident.Size = new Size(189, 208);
+			picResident.Size = new Size(198, 165);
 			picResident.SizeMode = PictureBoxSizeMode.Zoom;
 			picResident.TabIndex = 6;
 			picResident.TabStop = false;
-			// 
-			// pnlResidentDetail
-			// 
-			pnlResidentDetail.BorderStyle = BorderStyle.FixedSingle;
-			pnlResidentDetail.Location = new Point(25, 192);
-			pnlResidentDetail.Margin = new Padding(2, 2, 2, 2);
-			pnlResidentDetail.Name = "pnlResidentDetail";
-			pnlResidentDetail.Size = new Size(240, 160);
-			pnlResidentDetail.SplitterDistance = 80;
-			pnlResidentDetail.SplitterWidth = 3;
-			pnlResidentDetail.TabIndex = 7;
-			pnlResidentDetail.TabStop = false;
 			// 
 			// lstResidents
 			// 
@@ -91,10 +78,10 @@
 			lstResidents.HorizontalScrollbar = true;
 			lstResidents.IntegralHeight = false;
 			lstResidents.ItemHeight = 15;
-			lstResidents.Location = new Point(24, 2);
-			lstResidents.Margin = new Padding(2, 2, 2, 2);
+			lstResidents.Location = new Point(226, 42);
+			lstResidents.Margin = new Padding(2);
 			lstResidents.Name = "lstResidents";
-			lstResidents.Size = new Size(219, 185);
+			lstResidents.Size = new Size(182, 166);
 			lstResidents.TabIndex = 0;
 			lstResidents.ValueMember = "Id";
 			lstResidents.SelectedIndexChanged += lstResidents_SelectedIndexChanged;
@@ -102,7 +89,7 @@
 			// lblNameValue
 			// 
 			lblNameValue.BorderStyle = BorderStyle.FixedSingle;
-			lblNameValue.Location = new Point(100, 363);
+			lblNameValue.Location = new Point(85, 214);
 			lblNameValue.Margin = new Padding(2, 0, 2, 0);
 			lblNameValue.Name = "lblNameValue";
 			lblNameValue.Size = new Size(100, 22);
@@ -112,7 +99,7 @@
 			// lblSpeciesValue
 			// 
 			lblSpeciesValue.BorderStyle = BorderStyle.FixedSingle;
-			lblSpeciesValue.Location = new Point(100, 399);
+			lblSpeciesValue.Location = new Point(86, 248);
 			lblSpeciesValue.Margin = new Padding(2, 0, 2, 0);
 			lblSpeciesValue.Name = "lblSpeciesValue";
 			lblSpeciesValue.Size = new Size(100, 22);
@@ -122,7 +109,7 @@
 			// lblPersonalityValue
 			// 
 			lblPersonalityValue.BorderStyle = BorderStyle.FixedSingle;
-			lblPersonalityValue.Location = new Point(100, 430);
+			lblPersonalityValue.Location = new Point(86, 280);
 			lblPersonalityValue.Margin = new Padding(2, 0, 2, 0);
 			lblPersonalityValue.Name = "lblPersonalityValue";
 			lblPersonalityValue.Size = new Size(100, 22);
@@ -132,7 +119,7 @@
 			// lblAffectionValue
 			// 
 			lblAffectionValue.BorderStyle = BorderStyle.FixedSingle;
-			lblAffectionValue.Location = new Point(100, 463);
+			lblAffectionValue.Location = new Point(86, 315);
 			lblAffectionValue.Margin = new Padding(2, 0, 2, 0);
 			lblAffectionValue.Name = "lblAffectionValue";
 			lblAffectionValue.Size = new Size(100, 22);
@@ -142,7 +129,7 @@
 			// lblCatchPhraseValue
 			// 
 			lblCatchPhraseValue.BorderStyle = BorderStyle.FixedSingle;
-			lblCatchPhraseValue.Location = new Point(100, 499);
+			lblCatchPhraseValue.Location = new Point(86, 350);
 			lblCatchPhraseValue.Margin = new Padding(2, 0, 2, 0);
 			lblCatchPhraseValue.Name = "lblCatchPhraseValue";
 			lblCatchPhraseValue.Size = new Size(100, 22);
@@ -152,92 +139,132 @@
 			// label1
 			// 
 			label1.AutoSize = true;
-			label1.Location = new Point(36, 503);
+			label1.Font = new Font("微軟正黑體", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 136);
+			label1.Location = new Point(22, 352);
 			label1.Margin = new Padding(2, 0, 2, 0);
 			label1.Name = "label1";
-			label1.Size = new Size(55, 15);
+			label1.Size = new Size(60, 17);
 			label1.TabIndex = 18;
 			label1.Text = "口頭禪：";
 			// 
 			// label2
 			// 
 			label2.AutoSize = true;
-			label2.Location = new Point(12, 467);
+			label2.Font = new Font("微軟正黑體", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 136);
+			label2.Location = new Point(4, 316);
 			label2.Margin = new Padding(2, 0, 2, 0);
 			label2.Name = "label2";
-			label2.Size = new Size(79, 15);
+			label2.Size = new Size(86, 17);
 			label2.TabIndex = 17;
 			label2.Text = "目前好感度：";
 			// 
 			// label3
 			// 
 			label3.AutoSize = true;
-			label3.Location = new Point(48, 437);
+			label3.Font = new Font("微軟正黑體", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 136);
+			label3.Location = new Point(35, 282);
 			label3.Margin = new Padding(2, 0, 2, 0);
 			label3.Name = "label3";
-			label3.Size = new Size(43, 15);
+			label3.Size = new Size(47, 17);
 			label3.TabIndex = 16;
 			label3.Text = "喜好：";
 			// 
 			// label4
 			// 
 			label4.AutoSize = true;
-			label4.Location = new Point(48, 403);
+			label4.Font = new Font("微軟正黑體", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 136);
+			label4.Location = new Point(34, 251);
 			label4.Margin = new Padding(2, 0, 2, 0);
 			label4.Name = "label4";
-			label4.Size = new Size(43, 15);
+			label4.Size = new Size(47, 17);
 			label4.TabIndex = 15;
 			label4.Text = "種族：";
 			// 
 			// lblNameTitle
 			// 
 			lblNameTitle.AutoSize = true;
-			lblNameTitle.Location = new Point(48, 367);
+			lblNameTitle.Font = new Font("微軟正黑體", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 136);
+			lblNameTitle.Location = new Point(34, 215);
 			lblNameTitle.Margin = new Padding(2, 0, 2, 0);
 			lblNameTitle.Name = "lblNameTitle";
-			lblNameTitle.Size = new Size(43, 15);
+			lblNameTitle.Size = new Size(47, 17);
 			lblNameTitle.TabIndex = 14;
 			lblNameTitle.Text = "名字：";
 			lblNameTitle.TextAlign = ContentAlignment.MiddleLeft;
 			// 
-			// btnAddResident
-			// 
-			btnAddResident.Location = new Point(360, 276);
-			btnAddResident.Margin = new Padding(2, 2, 2, 2);
-			btnAddResident.Name = "btnAddResident";
-			btnAddResident.Size = new Size(73, 23);
-			btnAddResident.TabIndex = 19;
-			btnAddResident.Text = "新增居民";
-			btnAddResident.UseVisualStyleBackColor = true;
-			btnAddResident.Click += btnAddResident_Click;
-			// 
-			// btnOpenSearch
-			// 
-			btnOpenSearch.Location = new Point(360, 315);
-			btnOpenSearch.Margin = new Padding(2, 2, 2, 2);
-			btnOpenSearch.Name = "btnOpenSearch";
-			btnOpenSearch.Size = new Size(73, 23);
-			btnOpenSearch.TabIndex = 20;
-			btnOpenSearch.Text = "查詢";
-			btnOpenSearch.UseVisualStyleBackColor = true;
-			btnOpenSearch.Click += btnOpenSearch_Click;
-			// 
 			// btnDeleteResident
 			// 
-			btnDeleteResident.Location = new Point(360, 352);
-			btnDeleteResident.Margin = new Padding(2, 2, 2, 2);
+			btnDeleteResident.Location = new Point(268, 269);
+			btnDeleteResident.Margin = new Padding(2);
 			btnDeleteResident.Name = "btnDeleteResident";
-			btnDeleteResident.Size = new Size(73, 23);
+			btnDeleteResident.Size = new Size(89, 32);
 			btnDeleteResident.TabIndex = 21;
 			btnDeleteResident.Text = "刪除居民";
 			btnDeleteResident.UseVisualStyleBackColor = true;
 			btnDeleteResident.Click += btnDeleteResident_Click;
 			// 
+			// btnResetAffection
+			// 
+			btnResetAffection.BackColor = Color.LightGray;
+			btnResetAffection.Cursor = Cursors.Hand;
+			btnResetAffection.FlatAppearance.BorderSize = 0;
+			btnResetAffection.FlatStyle = FlatStyle.Flat;
+			btnResetAffection.Location = new Point(277, 352);
+			btnResetAffection.Name = "btnResetAffection";
+			btnResetAffection.Size = new Size(75, 23);
+			btnResetAffection.TabIndex = 22;
+			btnResetAffection.Text = "歸零好感度";
+			btnResetAffection.UseVisualStyleBackColor = false;
+			btnResetAffection.Click += btnResetAffection_Click;
+			// 
+			// chkTrashMode
+			// 
+			chkTrashMode.AutoSize = true;
+			chkTrashMode.Location = new Point(385, 264);
+			chkTrashMode.Name = "chkTrashMode";
+			chkTrashMode.Size = new Size(86, 19);
+			chkTrashMode.TabIndex = 23;
+			chkTrashMode.Text = "顯示垃圾桶";
+			chkTrashMode.UseVisualStyleBackColor = true;
+			chkTrashMode.CheckedChanged += chkTrashMode_CheckedChanged_1;
+			// 
+			// btnRestore
+			// 
+			btnRestore.BackColor = Color.FromArgb(192, 255, 192);
+			btnRestore.FlatAppearance.BorderSize = 0;
+			btnRestore.FlatStyle = FlatStyle.Flat;
+			btnRestore.Location = new Point(389, 287);
+			btnRestore.Name = "btnRestore";
+			btnRestore.Size = new Size(75, 25);
+			btnRestore.TabIndex = 24;
+			btnRestore.Text = "回復居民";
+			btnRestore.UseVisualStyleBackColor = false;
+			btnRestore.Visible = false;
+			btnRestore.Click += btnRestore_Click;
+			// 
+			// BtnSearch
+			// 
+			BtnSearch.FlatAppearance.BorderSize = 0;
+			BtnSearch.ForeColor = Color.Black;
+			BtnSearch.Location = new Point(268, 307);
+			BtnSearch.Name = "BtnSearch";
+			BtnSearch.Size = new Size(89, 27);
+			BtnSearch.TabIndex = 25;
+			BtnSearch.Text = "查詢";
+			BtnSearch.UseCompatibleTextRendering = true;
+			BtnSearch.UseVisualStyleBackColor = true;
+			BtnSearch.Click += btnOpenSearch_Click;
+			// 
 			// frmResidentInfo
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
-			ClientSize = new Size(711, 547);
+			ClientSize = new Size(483, 402);
+			Controls.Add(BtnSearch);
+			Controls.Add(btnRestore);
+			Controls.Add(chkTrashMode);
+			Controls.Add(btnResetAffection);
+			Controls.Add(picResident);
 			Controls.Add(lblNameValue);
 			Controls.Add(lblNameTitle);
 			Controls.Add(lblSpeciesValue);
@@ -246,18 +273,15 @@
 			Controls.Add(lblCatchPhraseValue);
 			Controls.Add(lblAffectionValue);
 			Controls.Add(label2);
-			Controls.Add(picResident);
 			Controls.Add(btnDeleteResident);
 			Controls.Add(label3);
-			Controls.Add(btnOpenSearch);
 			Controls.Add(label4);
-			Controls.Add(btnAddResident);
-			Controls.Add(pnlResidentDetail);
 			Controls.Add(btnGiveGift);
 			Controls.Add(label1);
 			FormBorderStyle = FormBorderStyle.FixedSingle;
+			Icon = (Icon)resources.GetObject("$this.Icon");
 			KeyPreview = true;
-			Margin = new Padding(2, 2, 2, 2);
+			Margin = new Padding(2);
 			MaximizeBox = false;
 			MinimizeBox = false;
 			Name = "frmResidentInfo";
@@ -265,8 +289,6 @@
 			Text = "居民資訊";
 			Load += Form1_Load;
 			((System.ComponentModel.ISupportInitialize)picResident).EndInit();
-			((System.ComponentModel.ISupportInitialize)pnlResidentDetail).EndInit();
-			pnlResidentDetail.ResumeLayout(false);
 			ResumeLayout(false);
 			PerformLayout();
 		}
@@ -274,7 +296,6 @@
 		#endregion
 		private Button btnGiveGift;
         private PictureBox picResident;
-        private SplitContainer pnlResidentDetail;
         private ListBox lstResidents;
         private Label lblNameValue;
         private Label lblSpeciesValue;
@@ -286,8 +307,10 @@
         private Label label3;
         private Label label4;
         private Label lblNameTitle;
-        private Button btnAddResident;
-        private Button btnOpenSearch;
         private Button btnDeleteResident;
-    }
+		private Button btnResetAffection;
+		private CheckBox chkTrashMode;
+		private Button btnRestore;
+		private Button BtnSearch;
+	}
 }
