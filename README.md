@@ -37,13 +37,19 @@ Solution
 
 
 ## 專案畫面 (Screenshots)
-1. 系統登入:<img width="454" height="302" alt="系統登入" src="https://github.com/user-attachments/assets/267fe810-a338-483e-b3c2-d4b77820c03c" />
-2. 主頁面導覽:<img width="368" height="284" alt="主頁面導覽" src="https://github.com/user-attachments/assets/1ce90666-7f89-4283-b7da-d0f729ad50f5" />
-3. 島民資訊管理:<img width="630" height="551" alt="居民資訊" src="https://github.com/user-attachments/assets/ce8685d1-5f69-45b8-9c7c-61c0d118ba6d" />
-4. 軟刪除(垃圾桶)機制:<img width="622" height="551" alt="顯示垃圾桶 回復居民" src="https://github.com/user-attachments/assets/96dfb8e0-95b7-4ea5-abcf-eb5b8123287c" />
-5. 送禮互動與好感度邏輯實作:<img width="555" height="291" alt="送禮後好感度變化" src="https://github.com/user-attachments/assets/fd8eb72c-21bf-49ba-b427-5972b542d2fc" />
-6. 新增居民:<img width="397" height="337" alt="新增居民" src="https://github.com/user-attachments/assets/56e126ad-ef7e-4346-9c25-ae54e58f3d3c" />
-7. 條件搜尋與資料表動態呈現:<img width="665" height="374" alt="居民搜尋" src="https://github.com/user-attachments/assets/05f4e65d-dd2e-4c13-86c2-5a74a0cb3237" />
+1. 系統登入:<img width="454" height="302" alt="系統登入" src="https://github.com/user-attachments/assets/ca7b92cb-cdf6-4966-9b10-8b141ae5041e" />
+
+2. 主頁面導覽:<img width="368" height="284" alt="主頁面導覽" src="https://github.com/user-attachments/assets/26b4870f-44d9-4d2b-9106-4840c153f5dc" />
+
+3. 島民資訊管理:<img width="812" height="528" alt="居民資訊" src="https://github.com/user-attachments/assets/cb2ec5b1-5580-46a4-9d4c-3d15e0351add" />
+
+4. 軟刪除(垃圾桶)機制:<img width="810" height="525" alt="顯示垃圾桶 回復居民" src="https://github.com/user-attachments/assets/6ec0c784-905c-46ca-82e1-9ba88100e2e3" />
+
+5. 送禮互動與好感度邏輯實作:<img width="555" height="291" alt="送禮後好感度變化" src="https://github.com/user-attachments/assets/3643b62c-9c8f-4d3c-ac67-5f27d26d15fe" />
+
+6. 新增居民:<img width="397" height="337" alt="新增居民" src="https://github.com/user-attachments/assets/a4fcefd9-2358-49b8-81e0-945f9ba13b7b" />
+
+7. 條件搜尋與資料表動態呈現:<img width="665" height="374" alt="居民搜尋" src="https://github.com/user-attachments/assets/08e4b7cc-a9d2-42ff-b6fe-7fc36ce0acdc" />
 
 
 
