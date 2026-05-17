@@ -39,7 +39,9 @@ Solution
 ## 專案畫面 (Screenshots)
 1. 系統登入:<img width="454" height="302" alt="系統登入" src="https://github.com/user-attachments/assets/ca7b92cb-cdf6-4966-9b10-8b141ae5041e" />
 
+
 2. 主頁面導覽:<img width="368" height="284" alt="主頁面導覽" src="https://github.com/user-attachments/assets/26b4870f-44d9-4d2b-9106-4840c153f5dc" />
+
 
 3. 島民資訊管理:<img width="822" height="538" alt="居民清單" src="https://github.com/user-attachments/assets/74e7efc9-9e57-412c-ba6a-998ea06f6da6" />
 
@@ -49,9 +51,13 @@ Solution
 
 5. 送禮互動與好感度邏輯實作:<img width="555" height="291" alt="送禮後好感度變化" src="https://github.com/user-attachments/assets/3643b62c-9c8f-4d3c-ac67-5f27d26d15fe" />
 
+
 6. 新增居民:<img width="397" height="337" alt="新增居民" src="https://github.com/user-attachments/assets/a4fcefd9-2358-49b8-81e0-945f9ba13b7b" />
 
+
 7. 條件搜尋與資料表動態呈現:<img width="665" height="374" alt="居民搜尋" src="https://github.com/user-attachments/assets/08e4b7cc-a9d2-42ff-b6fe-7fc36ce0acdc" />
+
+
 
 
 
