@@ -41,9 +41,11 @@ Solution
 
 2. 主頁面導覽:<img width="368" height="284" alt="主頁面導覽" src="https://github.com/user-attachments/assets/26b4870f-44d9-4d2b-9106-4840c153f5dc" />
 
-3. 島民資訊管理:<img width="812" height="528" alt="居民資訊" src="https://github.com/user-attachments/assets/cb2ec5b1-5580-46a4-9d4c-3d15e0351add" />
+3. 島民資訊管理:<img width="822" height="538" alt="居民清單" src="https://github.com/user-attachments/assets/74e7efc9-9e57-412c-ba6a-998ea06f6da6" />
 
-4. 軟刪除(垃圾桶)機制:<img width="810" height="525" alt="顯示垃圾桶 回復居民" src="https://github.com/user-attachments/assets/6ec0c784-905c-46ca-82e1-9ba88100e2e3" />
+
+4. 軟刪除(垃圾桶)機制:<img width="813" height="531" alt="垃圾桶" src="https://github.com/user-attachments/assets/06c86c9a-6266-46e7-9102-d05bf14fb8fa" />
+
 
 5. 送禮互動與好感度邏輯實作:<img width="555" height="291" alt="送禮後好感度變化" src="https://github.com/user-attachments/assets/3643b62c-9c8f-4d3c-ac67-5f27d26d15fe" />
 
