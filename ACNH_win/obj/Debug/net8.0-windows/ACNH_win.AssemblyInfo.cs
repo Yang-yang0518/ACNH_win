@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ACNH_win")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cb8a9d7c5531789ed4ee62580446ffb14d898ad0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+25a24659bddfed2bbae1a53c12fb277021224f37")]
 [assembly: System.Reflection.AssemblyProductAttribute("ACNH_win")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ACNH_win")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
