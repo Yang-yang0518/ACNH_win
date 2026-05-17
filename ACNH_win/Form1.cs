@@ -15,9 +15,21 @@ namespace ACNH_win
             _connStr = connStr;
 
             this.BackColor = Color.FromArgb(250, 247, 242);
-
             this.KeyPreview = true;
             this.KeyDown += (s, e) => { if (e.KeyCode == Keys.Escape) this.Close(); };
+
+            // 欄位由程式碼建立，不走 Designer（避免 VS 產生 Name 欄位衝突）
+            dgvResidents.Columns.Clear();
+            dgvResidents.Columns.Add(new DataGridViewTextBoxColumn
+                { DataPropertyName = "Name",        HeaderText = "姓名",   FillWeight = 110, ReadOnly = true, Name = "colName" });
+            dgvResidents.Columns.Add(new DataGridViewTextBoxColumn
+                { DataPropertyName = "Species",     HeaderText = "種族",   FillWeight = 90,  ReadOnly = true, Name = "colSpecies" });
+            dgvResidents.Columns.Add(new DataGridViewTextBoxColumn
+                { DataPropertyName = "Personality", HeaderText = "性格",   FillWeight = 90,  ReadOnly = true, Name = "colPersonality" });
+            dgvResidents.Columns.Add(new DataGridViewTextBoxColumn
+                { DataPropertyName = "Affection",   HeaderText = "好感度", FillWeight = 70,  ReadOnly = true, Name = "colAffection" });
+
+            dgvResidents.SelectionChanged += dgvResidents_SelectionChanged;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -27,12 +39,12 @@ namespace ACNH_win
             BindResidents();
         }
 
-        // ── 垃圾桶模式 ──────────────────────────────────────────────
+        // ── 垃圾桶模式 ───────────────────────────────────────────────
         private void chkTrashMode_CheckedChanged_1(object sender, EventArgs e)
         {
             _tresMode = chkTrashMode.Checked;
-            btnRestore.Visible = _tresMode;
-            btnGiveGift.Enabled = !_tresMode;
+            btnRestore.Visible        = _tresMode;
+            btnGiveGift.Enabled       = !_tresMode;
             btnDeleteResident.Enabled = !_tresMode;
             btnResetAffection.Enabled = !_tresMode;
             ClearResidentUI();
@@ -104,11 +116,10 @@ WHERE  r.Id = @Id AND r.IsDeleted = 0;";
             lblPersonalityValue.Text = dto.Personality;
             lblCatchPhraseValue.Text = dto.CatchPhrase;
             lblAffectionValue.Text   = dto.Affection.ToString();
-
             LoadResidentImage(dto.ImagePath);
         }
 
-        // ── DataGridView 選取 ─────────────────────────────────────────
+        // ── DataGridView 選取 ────────────────────────────────────────
         private void dgvResidents_SelectionChanged(object sender, EventArgs e)
         {
             if (_tresMode) return;
@@ -125,6 +136,8 @@ WHERE  r.Id = @Id AND r.IsDeleted = 0;";
                 ShowSpeechBubble(catchPhrase);
             _lastBubbleResidentId = selected.Id;
         }
+
+        private void dgvResidents_CellContentClick(object sender, DataGridViewCellEventArgs e) { }
 
         private void SelectResidentById(int id)
         {
@@ -150,10 +163,10 @@ WHERE  r.Id = @Id AND r.IsDeleted = 0;";
             int x = pic.X + picResident.Width / 2 - bubble.Width / 2;
             int y = pic.Y - bubble.Height - 10;
 
-            if (x < formRect.Left)                     x = formRect.Left;
-            if (x + bubble.Width > formRect.Right)     x = formRect.Right - bubble.Width;
+            if (x < formRect.Left)                   x = formRect.Left;
+            if (x + bubble.Width > formRect.Right)   x = formRect.Right - bubble.Width;
             y = Math.Max(y, formRect.Top + 5);
-            if (y + bubble.Height > formRect.Bottom)   y = formRect.Bottom - bubble.Height;
+            if (y + bubble.Height > formRect.Bottom) y = formRect.Bottom - bubble.Height;
 
             bubble.Location = new Point(x, y);
             bubble.Show(this);
@@ -168,7 +181,6 @@ WHERE  r.Id = @Id AND r.IsDeleted = 0;";
 
             if (!File.Exists(fullPath))
                 fullPath = Path.Combine(Application.StartupPath, defaultRelative);
-
             if (!File.Exists(fullPath)) return;
 
             picResident.Image?.Dispose();
@@ -201,17 +213,13 @@ WHERE  r.Id = @Id AND r.IsDeleted = 0;";
             if (frm.ShowDialog() == DialogResult.OK)
             {
                 LoadResidentDetail(selected.Id);
-                BindResidents(); // 重新整理好感度欄
+                BindResidents();
             }
         }
 
         private void btnDeleteResident_Click(object sender, EventArgs e)
         {
-            if (dgvResidents.SelectedRows.Count == 0)
-            {
-                MessageBox.Show("請先選擇居民");
-                return;
-            }
+            if (dgvResidents.SelectedRows.Count == 0) { MessageBox.Show("請先選擇居民"); return; }
             var selected = dgvResidents.SelectedRows[0].DataBoundItem as ResidentRowDto;
             if (selected == null) return;
 
@@ -225,11 +233,7 @@ WHERE  r.Id = @Id AND r.IsDeleted = 0;";
 
         private void btnResetAffection_Click(object sender, EventArgs e)
         {
-            if (dgvResidents.SelectedRows.Count == 0)
-            {
-                MessageBox.Show("請先選擇居民");
-                return;
-            }
+            if (dgvResidents.SelectedRows.Count == 0) { MessageBox.Show("請先選擇居民"); return; }
             var selected = dgvResidents.SelectedRows[0].DataBoundItem as ResidentRowDto;
             if (selected == null) return;
 
@@ -241,16 +245,8 @@ WHERE  r.Id = @Id AND r.IsDeleted = 0;";
 
         private void btnRestore_Click(object sender, EventArgs e)
         {
-            if (!_tresMode)
-            {
-                MessageBox.Show("請先勾選「顯示垃圾桶」");
-                return;
-            }
-            if (dgvResidents.SelectedRows.Count == 0)
-            {
-                MessageBox.Show("請先選擇要回復的居民");
-                return;
-            }
+            if (!_tresMode) { MessageBox.Show("請先勾選「顯示垃圾桶」"); return; }
+            if (dgvResidents.SelectedRows.Count == 0) { MessageBox.Show("請先選擇要回復的居民"); return; }
             var selected = dgvResidents.SelectedRows[0].DataBoundItem as ResidentRowDto;
             if (selected == null) return;
 
@@ -259,16 +255,8 @@ WHERE  r.Id = @Id AND r.IsDeleted = 0;";
                 "UPDATE Residents SET IsDeleted = 0 WHERE Id = @Id",
                 new SqlParameter("@Id", selected.Id));
 
-            if (rows > 0)
-            {
-                MessageBox.Show("已回復居民");
-                BindResidents();
-                ClearResidentUI();
-            }
-            else
-            {
-                MessageBox.Show("回復失敗");
-            }
+            if (rows > 0) { MessageBox.Show("已回復居民"); BindResidents(); ClearResidentUI(); }
+            else MessageBox.Show("回復失敗");
         }
 
         private void btnAddResident_Click(object sender, EventArgs e)
@@ -289,7 +277,7 @@ WHERE  r.Id = @Id AND r.IsDeleted = 0;";
                 SelectResidentById(frm.SelectedResidentId.Value);
         }
 
-        // ── 好感度歸零（DB）────────────────────────────────────────────
+        // ── 好感度歸零 ────────────────────────────────────────────────
         private void ResetAffectionForResident(int residentId)
         {
             using var conn = new SqlConnection(_connStr);

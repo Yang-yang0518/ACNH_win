@@ -19,10 +19,6 @@ namespace ACNH_win
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmResidentInfo));
             dgvResidents = new DataGridView();
-            colName = new DataGridViewTextBoxColumn();
-            colSpecies = new DataGridViewTextBoxColumn();
-            colPersonality = new DataGridViewTextBoxColumn();
-            colAffection = new DataGridViewTextBoxColumn();
             picResident = new PictureBox();
             lblNameTitle = new Label();
             lblNameValue = new Label();
@@ -45,7 +41,7 @@ namespace ACNH_win
             ((System.ComponentModel.ISupportInitialize)dgvResidents).BeginInit();
             SuspendLayout();
 
-            // dgvResidents
+            // dgvResidents（欄位由 Form1.cs 程式碼動態加入，不在此宣告）
             dgvResidents.AllowUserToAddRows = false;
             dgvResidents.AllowUserToDeleteRows = false;
             dgvResidents.AllowUserToResizeRows = false;
@@ -53,9 +49,7 @@ namespace ACNH_win
             dgvResidents.BackgroundColor = Color.White;
             dgvResidents.BorderStyle = BorderStyle.None;
             dgvResidents.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            dgvResidents.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
             dgvResidents.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvResidents.Columns.AddRange(new DataGridViewColumn[] { colName, colSpecies, colPersonality, colAffection });
             dgvResidents.Location = new Point(12, 44);
             dgvResidents.MultiSelect = false;
             dgvResidents.Name = "dgvResidents";
@@ -64,35 +58,6 @@ namespace ACNH_win
             dgvResidents.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvResidents.Size = new Size(610, 178);
             dgvResidents.TabIndex = 0;
-            dgvResidents.SelectionChanged += dgvResidents_SelectionChanged;
-
-            // colName
-            colName.DataPropertyName = "Name";
-            colName.FillWeight = 110;
-            colName.HeaderText = "姓名";
-            colName.Name = "colName";
-            colName.ReadOnly = true;
-
-            // colSpecies
-            colSpecies.DataPropertyName = "Species";
-            colSpecies.FillWeight = 90;
-            colSpecies.HeaderText = "種族";
-            colSpecies.Name = "colSpecies";
-            colSpecies.ReadOnly = true;
-
-            // colPersonality
-            colPersonality.DataPropertyName = "Personality";
-            colPersonality.FillWeight = 90;
-            colPersonality.HeaderText = "性格";
-            colPersonality.Name = "colPersonality";
-            colPersonality.ReadOnly = true;
-
-            // colAffection
-            colAffection.DataPropertyName = "Affection";
-            colAffection.FillWeight = 70;
-            colAffection.HeaderText = "好感度";
-            colAffection.Name = "colAffection";
-            colAffection.ReadOnly = true;
 
             // picResident
             picResident.Location = new Point(12, 234);
@@ -288,7 +253,7 @@ namespace ACNH_win
             Margin = new Padding(2);
             MaximizeBox = false;
             MinimizeBox = false;
-            Name = "frmResidentInfo";
+            this.Name = "frmResidentInfo";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "居民資訊";
             Load += Form1_Load;
@@ -301,10 +266,6 @@ namespace ACNH_win
         #endregion
 
         private DataGridView dgvResidents;
-        private DataGridViewTextBoxColumn colName;
-        private DataGridViewTextBoxColumn colSpecies;
-        private DataGridViewTextBoxColumn colPersonality;
-        private DataGridViewTextBoxColumn colAffection;
         private PictureBox picResident;
         private Label lblNameTitle;
         private Label lblNameValue;
